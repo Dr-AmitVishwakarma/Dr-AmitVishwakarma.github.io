@@ -811,16 +811,30 @@ nav a:hover::after {
     }
 
     .hero {
-        padding: 70px 0 90px;
+        padding: 70px 0 105px;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 62px;
+        gap: 70px;
     }
 
-    .hero-image-wrapper {
+    .hero-visual {
+        width: min(100%, 430px);
         max-width: 430px;
+        justify-self: start;
+    }
+
+    .floating-research-card {
+        right: -30px;
+    }
+
+    .hero-affiliations {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scroll-indicator {
+        display: none;
     }
 
     .timeline-item {
@@ -844,24 +858,46 @@ nav a:hover::after {
         font-size: 16px;
     }
 
+    .hero {
+        padding-top: 55px;
+    }
+
     .hero h1 {
-        font-size: 50px;
+        font-size: 51px;
     }
 
-    .hero h2 {
-        font-size: 27px;
-    }
-
-    .section {
-        padding: 82px 0;
+    .hero-statement {
+        font-size: 25px;
     }
 
     .hero-actions {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .button {
         width: 100%;
+    }
+
+    .hero-affiliations {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .hero-visual {
+        width: calc(100% - 15px);
+    }
+
+    .floating-research-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: calc(100% - 28px);
+        margin: -35px 14px 0;
+    }
+
+    .section {
+        padding: 82px 0;
     }
 
     .publication {
