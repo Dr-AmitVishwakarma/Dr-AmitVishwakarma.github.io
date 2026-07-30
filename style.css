@@ -155,29 +155,19 @@ ul {
     opacity:.85;
 
 }
-.brand:hover {
-    background: var(--text);
-    color: white;
-}
-
 nav {
     display: flex;
     align-items: center;
     gap: 27px;
 }
 
-nav a{
-
-    color:var(--muted);
-
-    font-size:16px;
-
-    font-weight:700;
-
-    transition:.25s;
-
+nav a {
+    position: relative;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.25s;
 }
-
 nav a::after {
     content: "";
     position: absolute;
@@ -415,7 +405,21 @@ nav a:hover::after {
 .button:hover {
     transform: translateY(-2px);
 }
+.button:hover {
+    transform: translateY(-2px);
+}
 
+.button:focus-visible,
+nav a:focus-visible,
+.brand:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.primary-button {
+    background: var(--text);
+    color: #ffffff;
+}
 .primary-button {
     background: var(--text);
     color: #ffffff;
@@ -798,7 +802,7 @@ nav a:hover::after {
     flex-direction: column;
     min-width: 0;
     padding: 32px;
-    border: 1px solid var(--border);
+    border: 1px solid rgba(17, 17, 17, 0.08);
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.78);
     overflow: hidden;
@@ -814,15 +818,22 @@ nav a:hover::after {
     transform: translateY(-10px);
     box-shadow: 0 35px 70px rgba(0,0,0,.10);
 }
-.domain-graphic{
-    transition: transform .5s ease, opacity .5s ease;
+.domain-visual {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.13;
+    transition:
+        opacity 0.5s ease,
+        scale 0.5s ease,
+        rotate 0.5s ease;
 }
 
-.domain-card:hover .domain-graphic{
-    transform: rotate(8deg) scale(1.06);
-    opacity: .25;
+.domain-card:hover .domain-visual {
+    opacity: 0.24;
+    scale: 1.06;
+    rotate: 4deg;
 }
-
 /* UNEVEN CARD SIZES */
 
 .domain-featured {
@@ -1272,7 +1283,7 @@ nav a:hover::after {
     top: 61px;
     width: 120px;
     height: 1px;
-    background:#104f43;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .blockchain-visual::before {
@@ -1651,7 +1662,7 @@ nav a:hover::after {
     }
 
     .hero {
-        padding-top: 55px;
+        padding: 55px 0 80px;
     }
 .credibility-ribbon {
     grid-template-columns: 1fr;
