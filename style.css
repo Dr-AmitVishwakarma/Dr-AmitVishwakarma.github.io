@@ -825,7 +825,7 @@ nav a:hover::after {
 .domain-featured {
     grid-column: span 2;
     grid-row: span 2;
-    min-height: 540px;
+    min-height: 440px;
 }
 
 .domain-wide {
@@ -838,9 +838,12 @@ nav a:hover::after {
 
 .domain-decision,
 .domain-twin {
-    min-height: 270px;
+    min-height: 300px;
 }
-
+.domain-decision h3,
+.domain-twin h3 {
+    font-size: 29px;
+}
 /* CARD COLOURS */
 
 .domain-ai {
