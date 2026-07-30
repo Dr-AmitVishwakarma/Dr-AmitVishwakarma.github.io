@@ -11,7 +11,7 @@
 
     --max-width: 1220px;
     --narrow-width: 860px;
-    --header-height: 76px;
+    --header-height: 88px;
 }
 
 * {
@@ -72,7 +72,7 @@ ul {
     top: 0;
     z-index: 1000;
     min-height: var(--header-height);
-    background: rgba(245, 243, 238, 0.9);
+    background:rgba(248,246,242,.88);
     border-bottom: 1px solid rgba(17, 17, 17, 0.1);
     backdrop-filter: blur(18px);
 }
@@ -82,45 +82,76 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 42px;
 }
 
-.brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 13px;
-    flex-shrink: 0;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-shrink:0;
 }
 
-.brand-logo {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
+.brand-logo{
+
+    width:58px;
+    height:58px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    transition:.25s;
+
 }
 
-.brand-wordmark {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
+.brand-wordmark{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:1;
+
 }
 
-.brand-wordmark strong {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
+.brand-wordmark strong{
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    white-space:nowrap;
+
+    letter-spacing:-0.03em;
+
 }
 
-.brand-wordmark small {
-    margin-top: 4px;
-    color: var(--muted);
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
+.brand-wordmark small{
+
+    margin-top:7px;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    white-space:nowrap;
+
+}
+.brand:hover .brand-logo{
+
+    transform:rotate(-4deg) scale(1.05);
+
 }
 
 .brand:hover .brand-logo {
@@ -138,11 +169,16 @@ nav {
     gap: 27px;
 }
 
-nav a {
-    position: relative;
-    color: var(--muted);
-    font-size: 14px;
-    font-weight: 650;
+nav a{
+
+    color:var(--muted);
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.25s;
+
 }
 
 nav a::after {
