@@ -637,6 +637,127 @@ nav a:hover::after {
 }
 
 /* =========================
+   RESEARCH IMPACT
+========================= */
+
+.impact-section {
+    position: relative;
+    padding: 110px 0;
+    background: var(--dark);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.impact-section::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: -300px;
+    right: -180px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(46, 132, 111, 0.22) 0%,
+            rgba(46, 132, 111, 0.05) 48%,
+            transparent 72%
+        );
+    pointer-events: none;
+}
+
+.impact-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.impact-heading {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(280px, 0.75fr);
+    align-items: end;
+    gap: 70px;
+}
+
+.impact-section .section-label {
+    color: #9ed2c4;
+}
+
+.impact-title {
+    max-width: 780px;
+    margin-top: 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 66px);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.impact-introduction {
+    max-width: 480px;
+    color: #b8b8b4;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 70px;
+    border-top: 1px solid #3a3a3a;
+    border-left: 1px solid #3a3a3a;
+}
+
+.impact-item {
+    min-height: 270px;
+    padding: 31px;
+    border-right: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
+    background: rgba(255, 255, 255, 0.015);
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.impact-item:hover {
+    background: rgba(255, 255, 255, 0.055);
+    transform: translateY(-4px);
+}
+
+.impact-number,
+.impact-text-value {
+    display: block;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(54px, 6vw, 82px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.impact-text-value {
+    color: #9ed2c4;
+}
+
+.impact-item h3 {
+    margin-top: 32px;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.impact-item p {
+    margin-top: 10px;
+    color: #aaa9a5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.impact-item-wide {
+    grid-column: span 2;
+}
+
+/* =========================
    GENERAL SECTIONS
 ========================= */
 
@@ -957,6 +1078,19 @@ nav a:hover::after {
     .two-column-grid {
         grid-template-columns: 1fr;
     }
+    .impact-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 24px;
+}
+
+.impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.impact-item-wide {
+    grid-column: span 1;
+}
 }
 
 /* =========================
@@ -1020,4 +1154,21 @@ nav a:hover::after {
     .footer-content {
         flex-direction: column;
     }
+    .impact-section {
+    padding: 80px 0;
+}
+
+.impact-grid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+}
+
+.impact-item {
+    min-height: auto;
+    padding: 28px 24px;
+}
+
+.impact-item-wide {
+    grid-column: span 1;
+}
 }
