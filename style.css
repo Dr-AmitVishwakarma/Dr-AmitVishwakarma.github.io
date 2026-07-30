@@ -333,12 +333,50 @@ nav a:hover::after {
     color: var(--muted);
     font-size: 18px;
 }
+.credibility-ribbon {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    margin-top: 28px;
+}
 
+.credibility-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 78px;
+    padding: 15px 17px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    background: rgba(255, 255, 255, 0.58);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.credibility-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.credibility-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.credibility-item strong {
+    font-size: 14px;
+    line-height: 1.35;
+}
 .hero-specialisations {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .hero-specialisations span {
@@ -873,6 +911,9 @@ nav a:hover::after {
     nav.open {
         display: flex;
     }
+    .credibility-ribbon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
     nav a {
         width: 100%;
@@ -930,7 +971,13 @@ nav a:hover::after {
     .hero {
         padding-top: 55px;
     }
+.credibility-ribbon {
+    grid-template-columns: 1fr;
+}
 
+.credibility-item {
+    min-height: auto;
+}
     .hero h1 {
         font-size: 51px;
     }
